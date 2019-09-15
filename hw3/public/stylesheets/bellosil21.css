@@ -1,0 +1,112 @@
+﻿/* 
+  Paul Patrick Bellosillo
+  September 9, 2019
+  CS 341 - Dr. Nuxoll
+  Homework #2
+*/ 
+
+/* Creates entire html page with a picture backdrop and borders */
+body {
+  background-image: url("https://www.xmple.com/wallpaper/white-pink-gradient-linear-1920x1080-c2-ffffff-ffb6c1-a-150-f-14.svg");
+  background-repeart: no-repeat;
+  text-align: center;
+}
+
+/* Creates site header */
+h1 {
+  background-color: lightpink;
+  color: red;
+  font-family: 'Sofia';
+  text-align: center;
+  border: 2px;
+  border-color: red;
+  border-style: dash;
+}
+
+/* Creates list with Google produced fonts */
+li {
+  color: black;
+  font-family: 'Sofia';
+  margin-left:auto; 
+  margin-right:auto;
+  list-style-type: square;
+}
+
+label {
+  color: brown;
+  font-family: 'Sofia';
+}
+
+/* Creates header for the list of orders */
+h3 {
+  color: black;
+  background-image: url("https://img.wallpapersafari.com/desktop/1920/1080/64/33/jgQqlB.png");
+  font-family: Verdana;
+  text-align: center;
+  border: 2px;
+  border-color: red;
+  border-style: solid;
+}
+
+p {
+  color: brown;
+  font-family: Verdana;
+  text-align: center;
+}
+
+table {
+   margin-left: auto; 
+   margin-right: auto;
+}
+
+/* allows bullet points appear next to the words in list */
+ul {
+  list-style-position: inside;
+}
+
+/*
+  External Citation
+  Date: September 9, 2019
+  Problem: Didn't know how to start the CSS format for the hoverable menu
+  Resource: https://www.w3schools.com/howto/howto_css_dropdown.asp
+  Solution: Used example shown in this page as a start code for the hoverable menu
+*/
+/* Initializes position of dropdown menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  background-color: #ff6081;
+}
+
+/* Makes the dropdown menu small and scrollable */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 80px
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  max-height: 100px;
+  overflow: auto;
+}
+
+/* allows menu to popup when month is hovered */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* changes background color of an entry in the hover menu when hovered */
+.dropdown-content p:hover {
+  background-color: #f0d0d0;
+}
+
+/* Creates a gray box, initially hidden, for later popup of order details */
+.details {
+  display: none;
+  background-color: #d8dbe2;
+  margin-left: auto; 
+  margin-right: auto;
+  position: center;
+
+}

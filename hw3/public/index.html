@@ -1,0 +1,126 @@
+﻿<!-- 
+  Paul Patrick Bellosillo
+  September 9, 2019
+  CS 341 - Dr. Nuxoll
+  Homework #2
+//-->
+
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+	<h1>Cheesecake Order Form</h1>
+
+	<!--
+	  External Citation
+	  Date: September 2, 2019
+	  Problem: Wanted to use a Google provided font other than a webpage safe font.
+	  Resource: https://www.w3schools.com/howto/howto_google_fonts.asp
+	  Solution: I used the an extra style sheet provided from the resource
+	//-->
+        <!-- Imports an external CSS format for page and another file for using a Google "Sofia" font. -->
+	<link rel="stylesheet" type="text/css" href="stylesheets/bellosil21.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+	<script 
+	  src=" https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"/>
+	</script>
+</head>
+
+<script src="javascripts/bellosil21.js"></script>
+
+<!-- Inserts Cheesecake image from online source. -->
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg" 
+  alt="Cheesecake" style="width:250px;height:200px;">	
+<br>
+
+<!-- Creates a dropdown select menu for the amount of cheesecakes desired.-->
+<p id="header">Quantity Topping</p>
+<div id="userinput">
+  <select id="quantity">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>
+
+  <!-- Creates a table filled with interable input for choosing flavor of cheesecake. -->
+  <table>
+    <form id="topping" action="">
+      <tr>
+        <td>
+          <input type="radio" name="flavor" id="plain" value="plain" checked>
+          <label for="plain">Plain</label>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="radio" name="flavor" id="cherry" value="cherry">
+          <label for="cherry">Cherry</label>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="radio" name="flavor" id="chocolate" value="chocolate">
+          <label for="chocolate">Chocolate</label>
+        </td>
+      </tr>
+    </form>
+  </table>
+
+<!-- Displays a textarea for users to input special instructions for order. -->
+<textarea id="instructions" style="width:300px;height:200px;" 
+ placeholder="Enter any special instructions here."></textarea>
+
+<br>
+<input id="orderbutton" type="button" value="Order" onclick="orderMade()">
+</div>
+
+<!-- Creates a table to show order details once processed -->
+<table class="details" id="details">
+  <tr>
+    <td><p>Quantity</p></td>
+    <td><p>Cheesecake</p></td>
+    <td><p>Special Instructions</p></td>
+  </tr>
+    <tr>
+    <td><p id="cc-qu"></p></td>
+    <td><p id="cc-type"></p></td>
+    <td><p id="sp-info"></p></td>
+  </tr>
+</table>
+
+<!--
+  External Citation
+  Date: September 9, 2019
+  Problem: Didn't really understand how to create a hoverable dropdown menu 
+  Resource: https://www.w3schools.com/howto/howto_css_dropdown.asp
+  Solution: I used the example framework for html shown in this page.
+//-->
+<!-- Displays list of past orders made -->
+<h3>Orders for
+  <!-- Creates hoverable dropdown menu for a selection of months -->
+  <div id="monthselection" class="dropdown"> <a id="month">Jan</a>
+    <div class="dropdown-content">
+      <p value="Jan">Jan</p>
+      <p value="Feb">Feb</p>
+      <p value="Mar">Mar</p>
+      <p value="Apr">Apr</p>
+      <p value="May">May</p>
+      <p value="Jun">Jun</p>
+      <p value="Jul">Jul</p>
+      <p value="Aug">Aug</p>
+      <p value="Sep">Sep</p>
+      <p value="Oct">Oct</p>
+      <p value="Nov">Nov</p>
+      <p value="Dec">Dec</p>
+    </div>
+  </div>
+</h3>
+<ul>
+	<li>11 cherry</li>
+	<li>17 chocolate</li>
+	<li>31 plain</li>
+</ul>
+</body>
+</html>
