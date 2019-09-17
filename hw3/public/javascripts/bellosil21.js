@@ -1,4 +1,11 @@
-﻿function orderMade() {
+﻿//
+// Paul Patrick Bellosillo
+// September 16, 2019
+// CS 341 - Dr. Nuxoll
+// Homework #3
+//
+
+function orderMade() {
   // Initialized alert message and retrieves special instructions from user
   var instruction = document.getElementById('instructions').value.trim();
   var instructionLower = instruction.toLowerCase();
