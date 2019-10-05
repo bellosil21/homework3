@@ -2,7 +2,7 @@
 // Paul Patrick Bellosillo
 // September 16, 2019
 // CS 341 - Dr. Nuxoll
-// Homework #3
+// Homework #4
 //
 
 function orderMade() {
@@ -63,5 +63,24 @@ function orderMade() {
 $(document).ready(function(){
   $("#monthselection p").click(function(){
     document.getElementById("month").innerHTML = $(this).attr("value");
+
+    /*
+     * External Citation
+     * Date: September 24, 2019
+     * Problem: Wasn't sure how to format the post method
+     * Resource: https://api.jquery.com/jQuery.post/
+     * Resolution: Used this API page as a format and reference in use for the 
+     *    post method
+     */
+      $.post('http://localhost:3000/orders',
+      {
+        month: $(this).text(),
+      },
+        function(data){
+      // Changes innerHTML for the final list to details within JSON object
+      document.getElementById("cherry_desc").innerHTML = data.cherryDescription;
+      document.getElementById("choco_desc").innerHTML = data.chocolateDescription;
+      document.getElementById("plain_desc").innerHTML = data.plainDescription;
+    });
   });
 });
